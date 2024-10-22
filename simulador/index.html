@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Campaña de Vacunación contra el Dengue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis de Campaña de Vacunación contra el Dengue</h1>
+        <form id="formularioSimulacion">
+            <label for="meses">Número de meses a analizar:</label>
+            <input type="number" id="meses" name="meses" min="1" max="12" required value="12">
+            
+            <label for="vacunasPorMes">Vacunas administradas por mes:</label>
+            <input type="number" id="vacunasPorMes" name="vacunasPorMes" min="1" value="12500" required>
+            
+            <button type="submit">Analizar</button>
+        </form>
+        
+        <table class="tablaResultado oculto">
+            <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Vacunados</th>
+                    <th>Casos Graves</th>
+                    <th>Tiempo Promedio (meses)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="summary oculto">
+        <h2>Resumen de Resultados</h2>
+        <div class="summary-item">
+            <span class="summary-label" id="totalV">Total de Vacunados:</span>
+            <span id="totalVaccinated">37,500</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-label">Total de Casos Graves:</span>
+            <span id="totalSevereCases">186</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-label">Porcentaje de Vacunados con Casos Graves:</span>
+            <span id="percentageSevereCases">0.50%</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-label">Menor Tiempo hasta Síntomas Graves (meses):</span>
+            <span id="minTime">9.8</span>
+        </div>
+    </div>
+</div>
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html>
